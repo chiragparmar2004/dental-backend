@@ -41,6 +41,9 @@ app.use("/api/admin", adminRoutes)
 app.get("/api/health", (req, res) => {
   res.json({ status: "OK" })
 })
+app.get("/", (req, res) => {
+  res.json({ message: "Hello World, this is the backend of the dental recruit platform" })
+})
 
 // Error handling middleware
 app.use((err, req, res, next) => {
